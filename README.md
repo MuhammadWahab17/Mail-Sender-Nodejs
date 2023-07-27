@@ -30,5 +30,7 @@ To use the code, create a new JavaScript file (e.g., sendEmail.js) and paste the
 Open your terminal (command prompt) and navigate to the folder where you saved the sendEmail.js file.
 Initiate npm and install mail sender module - Nodemailer and Run the script using Node.js:
 **- npm init -y**
+
 **- npm install nodemailer**
+
 **- node sendEmail.js**
