@@ -1,0 +1,46 @@
+const nodemailer = require("nodemailer"); //npm i nodemailer
+
+async function sendMail(senderMail, senderMailPassword, receiver) {
+  // Configure your email transport
+  const transporter = nodemailer.createTransport({
+    // Set your email service provider and credentials
+    service: "gmail",
+    auth: {
+      user: senderMail,
+      pass: senderMailPassword,
+    },
+  });
+
+  const text = `Your mail template here for Mail body!`;
+
+  const mailOptions = {
+    from: "//Your concern",
+    to: receiver,
+    subject: "",
+    html: text,
+  };
+  // Send email
+  const sendEmail = (mailOptions) => {
+    return new Promise((resolve, reject) => {
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(info.response);
+        }
+      });
+    });
+  };
+  // Usage
+  try {
+    const emailResponse = await sendEmail(mailOptions);
+    console.log("Email sent:", emailResponse);
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
+}
+sender = "Your_MAIL";
+senderPassword = "YOUR_APP_PASSWORD"; //check readme file, there i documented about how to get this password
+receiver = "RECEIVER";
+
+sendMail(sender, senderPassword, receiver);
