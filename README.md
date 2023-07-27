@@ -1,6 +1,7 @@
 # Mail-Sender-Nodejs
 
 **Step 1: Create a Gmail App Password**
+
 To send emails through Gmail using Nodemailer, you'll need to create an app password. This is an additional layer of security for your Gmail account when using third-party applications like Nodemailer.
 
 Follow these steps to create a Gmail app password:
@@ -15,6 +16,7 @@ Select Security.
 - Google will generate a unique app password for you. Make sure to copy this password because you won't be able to see it again.
 
 **Step 2: Understand and Use the Provided Code**
+
 The provided code is a Node.js function that uses Nodemailer to send an email. It takes three parameters: the sender's email address, the app password you generated earlier, and the receiver's email address.
 
 Replace the placeholders in the code with your own values:
@@ -26,9 +28,11 @@ Once you've updated the code with your credentials, you can use the sendMail fun
 
 
 **Step 3: Setup**
+
 To use the code, create a new JavaScript file (e.g., sendEmail.js) and paste the provided code into it. Save the file.
 Open your terminal (command prompt) and navigate to the folder where you saved the sendEmail.js file.
 Initiate npm and install mail sender module - Nodemailer and Run the script using Node.js:
+
 **- npm init -y**
 
 **- npm install nodemailer**
